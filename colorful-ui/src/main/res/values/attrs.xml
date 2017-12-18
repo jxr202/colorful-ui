@@ -13,11 +13,11 @@
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="titleTextId" format="reference|integer"/>
-        <attr name="titleText" format="string"/>
-        <attr name="titleTextSize" format="dimension"/>
-        <attr name="titleTextColor" format="color"/>
-        <attr name="titleTextVisibility">
+        <attr name="titleViewId" format="reference|integer"/>
+        <attr name="titleViewText" format="string"/>
+        <attr name="titleViewTextSize" format="dimension"/>
+        <attr name="titleViewTextColor" format="color"/>
+        <attr name="titleViewTextVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />

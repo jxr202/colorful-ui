@@ -59,16 +59,16 @@ public class DateSelectView extends RelativeLayout {
         mDateLeft.setImageDrawable(array.getDrawable(R.styleable.dateStyle_leftViewSrc));
         mDateRight.setImageDrawable(array.getDrawable(R.styleable.dateStyle_rightViewSrc));
 
-        mDateTitleId = array.getResourceId(R.styleable.dateStyle_titleTextId, R.id.date_title);
+        mDateTitleId = array.getResourceId(R.styleable.dateStyle_titleViewId, R.id.date_title);
         mDateTitle.setId(mDateTitleId);
-        mDateTitle.setText(array.getString(R.styleable.dateStyle_titleText));
-        mDateTitle.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_titleTextSize, 16)));
-        mDateTitle.setTextColor(array.getColor(R.styleable.dateStyle_titleTextColor, 0xff2C9BB6));
+        mDateTitle.setText(array.getString(R.styleable.dateStyle_titleViewText));
+        mDateTitle.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_titleViewTextSize, 16)));
+        mDateTitle.setTextColor(array.getColor(R.styleable.dateStyle_titleViewTextColor, 0xff2C9BB6));
 
         mDateToday.setGravity(Gravity.CENTER);
         mDateToday.setText(array.getString(R.styleable.dateStyle_todayText));
-        mDateToday.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_titleTextSize, 16)));
-        mDateToday.setTextColor(array.getColor(R.styleable.dateStyle_titleTextColor, 0xffffffff));
+        mDateToday.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_todayTextSize, 16)));
+        mDateToday.setTextColor(array.getColor(R.styleable.dateStyle_todayTextColor, 0xffffffff));
         mDateToday.setBackgroundResource(array.getResourceId(R.styleable.dateStyle_todayTextBackground, R.drawable.bg_date_today));
 
         array.recycle();
