@@ -22,7 +22,16 @@
 	}
 	
 	
-# 2.用法，在layout文件中加入 :
+# 2.用法，layout文件 :
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jxr202="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
 
     <com.jxr202.colorful_ui.DateSelectView
         android:id="@+id/dateSelectView"
@@ -39,6 +48,18 @@
         jxr202:todayText="@string/date_today"
         jxr202:todayTextSize="16dp"
         jxr202:todayTextColor="#ffffff"/>
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#2C9BB6"
+        android:textSize="16sp"
+        android:text="@string/date_title"/>
+
+</LinearLayout >
+
 		
 	
 # 3.事件监听，在点击某个控件时的回调：
