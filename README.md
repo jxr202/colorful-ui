@@ -24,7 +24,6 @@
 	
 # 2.用法，layout文件 :
 
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:jxr202="http://schemas.android.com/apk/res-auto"
