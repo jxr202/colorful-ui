@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+
+    <declare-styleable name="dateStyle">
+
+        <attr name="uiBackground" format="color|reference"/>
+
+        <attr name="leftViewId" format="reference|integer"/>
+        <attr name="leftViewSrc" format="color|reference"/>
+        <attr name="leftViewVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="titleTextId" format="reference|integer"/>
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleTextColor" format="color"/>
+        <attr name="titleTextVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="rightViewId" format="reference|integer"/>
+        <attr name="rightViewSrc" format="color|reference"/>
+        <attr name="rightViewVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="todayText" format="color|reference"/>
+        <attr name="todayTextSize" format="dimension"/>
+        <attr name="todayTextColor" format="color"/>
+        <attr name="todayTextBackground" format="color|reference"/>
+        <attr name="todayTextVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+    </declare-styleable>
+
+</resources >
