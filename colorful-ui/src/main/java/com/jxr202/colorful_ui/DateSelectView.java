@@ -163,6 +163,9 @@ public class DateSelectView extends RelativeLayout {
             @Override
             public void onClick(View view) {
                 if (mListener != null && mClickable) {
+                    if (dateToString(mCalendar.getTime(), mFormat).equals(dateToString(Calendar.getInstance().getTime(), mFormat))) {
+                        return;
+                    }
                     initCalendar();
                     mDateTitle.setText(dateToString(mCalendar.getTime(), mFormat));
                     mListener.onDateTodayClick();
