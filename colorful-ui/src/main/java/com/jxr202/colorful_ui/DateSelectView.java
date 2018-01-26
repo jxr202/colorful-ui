@@ -30,7 +30,7 @@ public class DateSelectView extends RelativeLayout {
     private TextView mDateToday;
 
     private int mDateTitleId;
-
+    private Context mContext;
     private Calendar mCalendar;
     private boolean mClickable = true;
     private String mFormat = "yyyy-MM-dd";
@@ -58,6 +58,7 @@ public class DateSelectView extends RelativeLayout {
 
     private void init(Context context, AttributeSet attrs, int defStyleAttr) {
 
+        mContext = context;
         mDateLeft = new ImageView(context);
         mDateRight = new ImageView(context);
         mDateTitle = new TextView(context);
@@ -71,12 +72,12 @@ public class DateSelectView extends RelativeLayout {
         mDateTitleId = array.getResourceId(R.styleable.dateStyle_titleViewId, R.id.date_title);
         mDateTitle.setId(mDateTitleId);
         mDateTitle.setText(array.getString(R.styleable.dateStyle_titleViewText));
-        mDateTitle.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_titleViewTextSize, 16)));
+        mDateTitle.setTextSize(px2dip(array.getDimension(R.styleable.dateStyle_titleViewTextSize, 16)));
         mDateTitle.setTextColor(array.getColor(R.styleable.dateStyle_titleViewTextColor, 0xff2C9BB6));
 
         mDateToday.setGravity(Gravity.CENTER);
         mDateToday.setText(array.getString(R.styleable.dateStyle_todayText));
-        mDateToday.setTextSize(px2dip(context, array.getDimension(R.styleable.dateStyle_todayTextSize, 16)));
+        mDateToday.setTextSize(px2dip(array.getDimension(R.styleable.dateStyle_todayTextSize, 16)));
         mDateToday.setTextColor(array.getColor(R.styleable.dateStyle_todayTextColor, 0xffffffff));
         mDateToday.setBackgroundResource(array.getResourceId(R.styleable.dateStyle_todayTextBackground, R.drawable.bg_date_today));
 
@@ -97,12 +98,32 @@ public class DateSelectView extends RelativeLayout {
         mCalendar.set(Calendar.MILLISECOND, 0);
     }
 
+    /**
+     * convert px to its equivalent dp
+     * <p>
+     * 将px转换为与之相等的dp
+     */
+    public int px2dp(float pxValue) {
+        final float scale = mContext.getResources().getDisplayMetrics().density;
+        return (int) (pxValue / scale + 0.5f);
+    }
+
+    /**
+     * convert dp to its equivalent px
+     * <p>
+     * 将dp转换为与之相等的px
+     */
+    public int dp2px(float dipValue) {
+        final float scale = mContext.getResources().getDisplayMetrics().density;
+        return (int) (dipValue * scale + 0.5f);
+    }
+
     private void initView() {
 
         RelativeLayout.LayoutParams mDateLeftParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams mDateRightParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams mDateTitleParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams mDateTodayParams = new RelativeLayout.LayoutParams(130, 75);
+        RelativeLayout.LayoutParams mDateTodayParams = new RelativeLayout.LayoutParams(dp2px(65), dp2px(26));
 
         mDateTitleParams.addRule(CENTER_IN_PARENT);
 
@@ -223,9 +244,9 @@ public class DateSelectView extends RelativeLayout {
     }
 
 
-    private int px2dip(Context context, float pxValue) {
+    private int px2dip(float pxValue) {
 
-        final float scale = context.getResources().getDisplayMetrics().density;
+        final float scale = mContext.getResources().getDisplayMetrics().density;
 
         return (int) (pxValue / scale + 0.5f);
     }
