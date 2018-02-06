@@ -19,7 +19,7 @@
         jxr202:titleViewText="@string/date_title"
         jxr202:titleViewTextSize="16dp"
         jxr202:titleViewTextColor="#2C9BB6"
-        jxr202:todayTextBackground="@drawable/bg_date_today"
+        jxr202:todayTextBackground="#50D2C2"
         jxr202:todayText="@string/date_today"
         jxr202:todayTextSize="16dp"
         jxr202:todayTextColor="#ffffff"/>

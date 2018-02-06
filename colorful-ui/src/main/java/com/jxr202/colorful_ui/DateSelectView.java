@@ -2,6 +2,7 @@ package com.jxr202.colorful_ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -79,7 +80,13 @@ public class DateSelectView extends RelativeLayout {
         mDateToday.setText(array.getString(R.styleable.dateStyle_todayText));
         mDateToday.setTextSize(px2dip(array.getDimension(R.styleable.dateStyle_todayTextSize, 16)));
         mDateToday.setTextColor(array.getColor(R.styleable.dateStyle_todayTextColor, 0xffffffff));
-        mDateToday.setBackgroundResource(array.getResourceId(R.styleable.dateStyle_todayTextBackground, R.drawable.bg_date_today));
+
+        int backgroundColor = array.getColor(R.styleable.dateStyle_todayTextBackground, 0xff3e6373);
+        GradientDrawable drawable = new GradientDrawable();//创建drawable
+        drawable.setColor(backgroundColor);
+        drawable.setCornerRadius(dp2px(25));
+        drawable.setStroke(dp2px(1), backgroundColor);
+        mDateToday.setBackground(drawable);
 
         array.recycle();
 
