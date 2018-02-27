@@ -2,7 +2,6 @@
 <resources >
 
     <declare-styleable name="dateStyle">
-
         <attr name="uiBackground" format="color|reference"/>
 
         <attr name="leftViewId" format="reference|integer"/>
@@ -36,6 +35,44 @@
         <attr name="todayTextColor" format="color"/>
         <attr name="todayTextBackground" format="color|reference"/>
         <attr name="todayTextVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+    </declare-styleable>
+
+    <!-- ****************标题栏*******************-->
+    <declare-styleable name="titleBar">
+        <attr name="leftDrawable" format="color|reference"/>
+        <attr name="leftImageId" format="reference|integer"/>
+        <attr name="leftImageVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="titleText" format="string"/>
+        <attr name="titleTextSize" format="dimension"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="titleTextVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="rightTextId" format="reference|integer"/>
+        <attr name="rightText" format="string"/>
+        <attr name="rightTextSize" format="dimension"/>
+        <attr name="rightTextColor" format="color"/>
+        <attr name="rightTextVisibility">
+            <enum name="gone" value="8" />
+            <enum name="invisible" value="4" />
+            <enum name="visible" value="0" />
+        </attr>
+
+        <attr name="rightDrawable" format="color|reference"/>
+        <attr name="rightImageId" format="reference|integer"/>
+        <attr name="rightImageVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />

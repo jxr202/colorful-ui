@@ -7,6 +7,18 @@
     android:background="#eeeeee"
     android:orientation="vertical" >
 
+    <com.jxr202.colorful_ui.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#B6D989"
+        jxr202:leftDrawable="@mipmap/ic_common_back"
+        jxr202:leftImageVisibility="visible"
+        jxr202:titleColor="#030303"
+        jxr202:titleText="@string/app_name"
+        jxr202:titleTextSize="15sp"
+        jxr202:titleTextVisibility="visible" />
+
     <com.jxr202.colorful_ui.DateSelectView
         android:id="@+id/dateSelectView"
         android:layout_width="match_parent"
