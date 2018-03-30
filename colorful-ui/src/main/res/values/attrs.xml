@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources >
 
+    <attr name="leftImage" format="color|reference"/>
+    <attr name="leftImageId" format="reference|integer"/>
+    <attr name="leftImageVisibility">
+        <enum name="gone" value="8" />
+        <enum name="invisible" value="4" />
+        <enum name="visible" value="0" />
+    </attr>
+
+    <attr name="leftTitleId" format="reference|integer"/>
+    <attr name="leftTitleText" format="string"/>
+    <attr name="leftTitleTextSize" format="dimension"/>
+    <attr name="leftTitleTextColor" format="color"/>
+    <attr name="leftTitleTextVisibility">
+        <enum name="gone" value="8" />
+        <enum name="invisible" value="4" />
+        <enum name="visible" value="0" />
+    </attr>
+
+    <attr name="rightTextId" format="reference|integer"/>
+    <attr name="rightText" format="string"/>
+    <attr name="rightTextSize" format="dimension"/>
+    <attr name="rightTextColor" format="color"/>
+    <attr name="rightTextVisibility">
+        <enum name="gone" value="8" />
+        <enum name="invisible" value="4" />
+        <enum name="visible" value="0" />
+    </attr>
+
+    <attr name="rightImage" format="color|reference"/>
+    <attr name="rightImageId" format="reference|integer"/>
+    <attr name="rightImageVisibility">
+        <enum name="gone" value="8" />
+        <enum name="invisible" value="4" />
+        <enum name="visible" value="0" />
+    </attr>
+
     <declare-styleable name="dateStyle">
         <attr name="uiBackground" format="color|reference"/>
 
@@ -44,12 +80,8 @@
     <!-- ****************标题栏*******************-->
     <declare-styleable name="titleBar">
         <attr name="leftDrawable" format="color|reference"/>
-        <attr name="leftImageId" format="reference|integer"/>
-        <attr name="leftImageVisibility">
-            <enum name="gone" value="8" />
-            <enum name="invisible" value="4" />
-            <enum name="visible" value="0" />
-        </attr>
+        <attr name="leftImageId"/>
+        <attr name="leftImageVisibility"/>
 
         <attr name="titleText" format="string"/>
         <attr name="titleTextSize" format="dimension"/>
@@ -60,23 +92,41 @@
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="rightTextId" format="reference|integer"/>
-        <attr name="rightText" format="string"/>
-        <attr name="rightTextSize" format="dimension"/>
-        <attr name="rightTextColor" format="color"/>
-        <attr name="rightTextVisibility">
-            <enum name="gone" value="8" />
-            <enum name="invisible" value="4" />
-            <enum name="visible" value="0" />
-        </attr>
+        <attr name="rightTextId"/>
+        <attr name="rightText"/>
+        <attr name="rightTextSize"/>
+        <attr name="rightTextColor"/>
+        <attr name="rightTextVisibility"/>
 
         <attr name="rightDrawable" format="color|reference"/>
-        <attr name="rightImageId" format="reference|integer"/>
-        <attr name="rightImageVisibility">
-            <enum name="gone" value="8" />
-            <enum name="invisible" value="4" />
-            <enum name="visible" value="0" />
-        </attr>
+        <attr name="rightImageId"/>
+        <attr name="rightImageVisibility"/>
     </declare-styleable>
+
+    <!-- **************** ItemView *******************-->
+    <declare-styleable name="ItemView">
+        <attr name="leftImage"/>
+        <attr name="leftImageId"/>
+        <attr name="leftImageVisibility"/>
+
+        <attr name="leftTitleId"/>
+        <attr name="leftTitleText"/>
+        <attr name="leftTitleTextSize"/>
+        <attr name="leftTitleTextColor"/>
+        <attr name="leftTitleTextVisibility"/>
+
+        <attr name="rightTextId" />
+        <attr name="rightText"/>
+        <attr name="rightTextSize"/>
+        <attr name="rightTextColor"/>
+        <attr name="rightTextVisibility"/>
+
+        <attr name="rightImage"/>
+        <attr name="rightImageId"/>
+        <attr name="rightImageVisibility"/>
+
+        <attr name="bottomLineColor" format="color"/>
+    </declare-styleable>
+
 
 </resources >

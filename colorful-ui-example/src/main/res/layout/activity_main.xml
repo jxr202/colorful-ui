@@ -14,6 +14,8 @@
         android:background="#B6D989"
         jxr202:leftDrawable="@mipmap/ic_common_back"
         jxr202:leftImageVisibility="visible"
+        jxr202:rightDrawable="@mipmap/ic_common_share"
+        jxr202:rightImageVisibility="visible"
         jxr202:titleColor="#030303"
         jxr202:titleText="@string/app_name"
         jxr202:titleTextSize="15sp"
@@ -44,5 +46,20 @@
         android:textColor="#2C9BB6"
         android:textSize="16sp"
         android:text="@string/date_title"/>
+
+    <com.jxr202.colorful_ui.ItemView
+        android:id="@+id/itemView"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#ffffff"
+        jxr202:leftImage="@mipmap/we_chat_sport_logo"
+        jxr202:leftTitleText="微信运动"
+        jxr202:leftTitleTextSize="15sp"
+        jxr202:leftTitleTextColor="#010101"
+        jxr202:rightText="24小时不停"
+        jxr202:rightTextSize="14sp"
+        jxr202:rightTextColor="#999999"
+        jxr202:rightImage="@drawable/ic_item_more"
+        jxr202:bottomLineColor="#cccccc"/>
 
 </LinearLayout >

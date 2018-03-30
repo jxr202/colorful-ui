@@ -9,6 +9,18 @@ import android.content.res.Resources;
 
 public class CommonUtils {
 
+    private static long lastClickTime;
+
+    public static boolean isFastDoubleClick() {
+        long time = System.currentTimeMillis();
+        long timeD = time - lastClickTime;
+        if (0 < timeD && timeD < 800) {
+            return true;
+        }
+        lastClickTime = time;
+        return false;
+    }
+
     public static float dp2px(Resources resources, float dp) {
         final float scale = resources.getDisplayMetrics().density;
         return dp * scale + 0.5f;
