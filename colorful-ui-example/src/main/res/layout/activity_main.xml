@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:jxr202="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eeeeee"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <com.jxr202.colorful_ui.TitleBar
         android:id="@+id/title_bar"
@@ -31,35 +30,36 @@
         jxr202:mRightViewSrc="@drawable/date_right"
         jxr202:mTitleViewId="@+id/date_title"
         jxr202:mTitleViewText="@string/date_title"
-        jxr202:mTitleViewTextSize="16dp"
         jxr202:mTitleViewTextColor="#2C9BB6"
-        jxr202:mTodayTextBackground="#50D2C2"
+        jxr202:mTitleViewTextSize="16dp"
         jxr202:mTodayText="@string/date_today"
-        jxr202:mTodayTextSize="16dp"
-        jxr202:mTodayTextColor="#ffffff"/>
+        jxr202:mTodayTextBackground="#50D2C2"
+        jxr202:mTodayTextColor="#ffffff"
+        jxr202:mTodayTextSize="16dp" />
 
     <TextView
         android:id="@+id/tv_date"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
+        android:text="@string/date_title"
         android:textColor="#2C9BB6"
-        android:textSize="16sp"
-        android:text="@string/date_title"/>
+        android:textSize="16sp" />
 
     <com.jxr202.colorful_ui.ItemView
         android:id="@+id/itemView"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="#ffffff"
+        jxr202:mBottomLineColor="#cccccc"
         jxr202:mLeftImage="@mipmap/we_chat_sport_logo"
         jxr202:mLeftTitleText="微信运动"
-        jxr202:mLeftTitleTextSize="15sp"
         jxr202:mLeftTitleTextColor="#010101"
-        jxr202:mRightText="24小时不停"
-        jxr202:mRightTextSize="14sp"
-        jxr202:mRightTextColor="#999999"
+        jxr202:mLeftTitleTextSize="15sp"
         jxr202:mRightImage="@drawable/ic_item_more"
-        jxr202:mBottomLineColor="#cccccc"/>
+        jxr202:mRightImageVisibility="gone"
+        jxr202:mRightText="24小时不停"
+        jxr202:mRightTextColor="#999999"
+        jxr202:mRightTextSize="14sp" />
 
-</LinearLayout >
+</LinearLayout>

@@ -90,7 +90,7 @@ public class ItemView extends RelativeLayout {
         LayoutParams bottomLineParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
 
         leftIconParams.addRule(CENTER_VERTICAL);
-        leftIconParams.setMarginStart(dp2px(10));
+        leftIconParams.setMarginStart(dp2px(15));
 
         leftTitleParams.addRule(CENTER_VERTICAL);
         leftTitleParams.addRule(END_OF, mLeftIconId);
@@ -105,8 +105,8 @@ public class ItemView extends RelativeLayout {
         if (mRightIconVisibility == VISIBLE) {
             rightTextParams.addRule(START_OF, mRightIconId);
         } else {
-            rightIconParams.addRule(ALIGN_PARENT_END);
-            rightIconParams.setMarginEnd(dp2px(15));
+            rightTextParams.addRule(ALIGN_PARENT_END);
+            rightTextParams.setMarginEnd(dp2px(20));
         }
 
         bottomLineParams.addRule(ALIGN_PARENT_BOTTOM);
