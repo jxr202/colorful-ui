@@ -27,6 +27,7 @@ public class ItemView extends RelativeLayout {
     private Context mContext;
     private int mLeftIconId;
     private int mRightIconId;
+    private int mRightIconVisibility;
 
     public ItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -63,9 +64,10 @@ public class ItemView extends RelativeLayout {
         mLeftTitle.setPadding(dp2px(15), 0, dp2px(15), 0);
 
         mRightIconId = array.getResourceId(R.styleable.ItemView_mRightImageId, R.id.rightIconId);
+        mRightIconVisibility = array.getInteger(R.styleable.ItemView_mRightImageVisibility, VISIBLE);
         mRightIcon.setId(mRightIconId);
         mRightIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mRightImage));
-        mRightIcon.setVisibility(array.getInteger(R.styleable.ItemView_mRightImageVisibility, VISIBLE));
+        mRightIcon.setVisibility(mRightIconVisibility);
 
         mRightSummary.setId(array.getResourceId(R.styleable.ItemView_mRightTextId, R.id.leftTextId));
         mRightSummary.setText(array.getString(R.styleable.ItemView_mRightText));
@@ -100,7 +102,12 @@ public class ItemView extends RelativeLayout {
         rightIconParams.setMarginEnd(dp2px(10));
 
         rightTextParams.addRule(CENTER_VERTICAL);
-        rightTextParams.addRule(START_OF, mRightIconId);
+        if (mRightIconVisibility == VISIBLE) {
+            rightTextParams.addRule(START_OF, mRightIconId);
+        } else {
+            rightIconParams.addRule(ALIGN_PARENT_END);
+            rightIconParams.setMarginEnd(dp2px(15));
+        }
 
         bottomLineParams.addRule(ALIGN_PARENT_BOTTOM);
 
