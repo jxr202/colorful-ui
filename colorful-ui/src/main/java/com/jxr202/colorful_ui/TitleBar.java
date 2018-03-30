@@ -71,33 +71,30 @@ public class TitleBar extends RelativeLayout {
         mIvRight = new ImageView(mContext);
         mTvRight = new TextView(mContext);
 
-        Resources res = getResources();
-        TypedArray ta = mContext.obtainStyledAttributes(attrs, R.styleable.titleBar, defStyleAttr, 0);
+        TypedArray array = mContext.obtainStyledAttributes(attrs, R.styleable.TitleBar, defStyleAttr, 0);
 
-        mLeftDrawable = ta.getDrawable(R.styleable.titleBar_leftDrawable);
-        mLeftImageVisibility = ta.getInteger(R.styleable.titleBar_leftImageVisibility, VISIBLE);
+        mLeftDrawable = array.getDrawable(R.styleable.TitleBar_mLeftDrawable);
+        mLeftImageVisibility = array.getInteger(R.styleable.TitleBar_mLeftImageVisibility, VISIBLE);
 
-        mTitleText = ta.getString(R.styleable.titleBar_titleText);
-        mTitleTextSize = CommonUtils.px2dip(mContext, ta.getDimension(R.styleable.titleBar_titleTextSize, 17));
-        mTitleTextColor = ta.getColor(R.styleable.titleBar_titleColor, 0xffffffff);
-        mTitleTextVisibility = ta.getInteger(R.styleable.titleBar_titleTextVisibility, VISIBLE);
+        mTitleText = array.getString(R.styleable.TitleBar_mTitleText);
+        mTitleTextSize = CommonUtils.px2dip(mContext, array.getDimension(R.styleable.TitleBar_mTitleTextSize, 17));
+        mTitleTextColor = array.getColor(R.styleable.TitleBar_mTitleColor, 0xffffffff);
+        mTitleTextVisibility = array.getInteger(R.styleable.TitleBar_mTitleTextVisibility, VISIBLE);
 
-        mRightText = ta.getString(R.styleable.titleBar_rightText);
-        mRightTextSize = CommonUtils.px2dip(mContext, ta.getDimension(R.styleable.titleBar_rightTextSize, 15));
-        mRightTextColor = ta.getColor(R.styleable.titleBar_rightTextColor, 0xffffffff);
-        mRightTextVisibility = ta.getInteger(R.styleable.titleBar_rightTextVisibility, GONE);
+        mRightText = array.getString(R.styleable.TitleBar_mRightText);
+        mRightTextSize = CommonUtils.px2dip(mContext, array.getDimension(R.styleable.TitleBar_mRightTextSize, 15));
+        mRightTextColor = array.getColor(R.styleable.TitleBar_mRightTextColor, 0xffffffff);
+        mRightTextVisibility = array.getInteger(R.styleable.TitleBar_mRightTextVisibility, GONE);
 
-        mRightDrawable = ta.getDrawable(R.styleable.titleBar_rightDrawable);
-        mRightImageVisibility = ta.getInteger(R.styleable.titleBar_rightImageVisibility, GONE);
+        mRightDrawable = array.getDrawable(R.styleable.TitleBar_mRightDrawable);
+        mRightImageVisibility = array.getInteger(R.styleable.TitleBar_mRightImageVisibility, GONE);
 
-        ta.recycle();
+        array.recycle();
         init();
         initListener();
     }
 
     private void init() {
-        Resources res = getResources();
-
         mIvLeft.setImageDrawable(mLeftDrawable);
         mIvLeft.setVisibility(mLeftImageVisibility);
 

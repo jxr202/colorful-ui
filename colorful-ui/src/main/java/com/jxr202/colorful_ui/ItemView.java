@@ -48,33 +48,33 @@ public class ItemView extends RelativeLayout {
 
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.ItemView, defStyleAttr, 0);
 
-        mLeftIconId = array.getResourceId(R.styleable.ItemView_leftImageId, R.id.leftIconId);
+        mLeftIconId = array.getResourceId(R.styleable.ItemView_mLeftImageId, R.id.leftIconId);
         mLeftIcon.setId(mLeftIconId);
-        mLeftIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_leftImage));
-        mLeftIcon.setVisibility(array.getInteger(R.styleable.ItemView_leftImageVisibility, VISIBLE));
+        mLeftIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mLeftImage));
+        mLeftIcon.setVisibility(array.getInteger(R.styleable.ItemView_mLeftImageVisibility, VISIBLE));
 
-        mLeftTitle.setId(array.getResourceId(R.styleable.ItemView_leftTitleId, R.id.leftTextId));
-        mLeftTitle.setText(array.getString(R.styleable.ItemView_leftTitleText));
-        mLeftTitle.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_leftTitleTextSize, 15)));
-        mLeftTitle.setTextColor(array.getColor(R.styleable.ItemView_leftTitleTextColor, 0xff010101));
-        mLeftTitle.setVisibility(array.getInteger(R.styleable.ItemView_leftTitleTextVisibility, VISIBLE));
+        mLeftTitle.setId(array.getResourceId(R.styleable.ItemView_mLeftTitleId, R.id.leftTextId));
+        mLeftTitle.setText(array.getString(R.styleable.ItemView_mLeftTitleText));
+        mLeftTitle.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mLeftTitleTextSize, 15)));
+        mLeftTitle.setTextColor(array.getColor(R.styleable.ItemView_mLeftTitleTextColor, 0xff010101));
+        mLeftTitle.setVisibility(array.getInteger(R.styleable.ItemView_mLeftTitleTextVisibility, VISIBLE));
         mLeftTitle.setEllipsize(TextUtils.TruncateAt.END);
         mLeftTitle.setLines(1);
         mLeftTitle.setPadding(dp2px(15), 0, dp2px(15), 0);
 
-        mRightIconId = array.getResourceId(R.styleable.ItemView_rightImageId, R.id.rightIconId);
+        mRightIconId = array.getResourceId(R.styleable.ItemView_mRightImageId, R.id.rightIconId);
         mRightIcon.setId(mRightIconId);
-        mRightIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_rightImage));
-        mRightIcon.setVisibility(array.getInteger(R.styleable.ItemView_rightImageVisibility, VISIBLE));
+        mRightIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mRightImage));
+        mRightIcon.setVisibility(array.getInteger(R.styleable.ItemView_mRightImageVisibility, VISIBLE));
 
-        mRightSummary.setId(array.getResourceId(R.styleable.ItemView_rightTextId, R.id.leftTextId));
-        mRightSummary.setText(array.getString(R.styleable.ItemView_rightText));
-        mRightSummary.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_rightTextSize, 15)));
-        mRightSummary.setTextColor(array.getColor(R.styleable.ItemView_rightTextColor, 0xff999999));
-        mRightSummary.setVisibility(array.getInteger(R.styleable.ItemView_rightTextVisibility, VISIBLE));
+        mRightSummary.setId(array.getResourceId(R.styleable.ItemView_mRightTextId, R.id.leftTextId));
+        mRightSummary.setText(array.getString(R.styleable.ItemView_mRightText));
+        mRightSummary.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mRightTextSize, 15)));
+        mRightSummary.setTextColor(array.getColor(R.styleable.ItemView_mRightTextColor, 0xff999999));
+        mRightSummary.setVisibility(array.getInteger(R.styleable.ItemView_mRightTextVisibility, VISIBLE));
         mRightSummary.setGravity(Gravity.END | Gravity.CENTER);
 
-        mBottomLine.setBackgroundColor(array.getColor(R.styleable.ItemView_bottomLineColor, 0xffff00ff));
+        mBottomLine.setBackgroundColor(array.getColor(R.styleable.ItemView_mBottomLineColor, 0xffff00ff));
 
         array.recycle();
         initView();

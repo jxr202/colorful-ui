@@ -65,23 +65,23 @@ public class DateSelectView extends RelativeLayout {
         mDateTitle = new TextView(context);
         mDateToday = new TextView(context);
 
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.dateStyle, defStyleAttr, 0);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.DateSelectView, defStyleAttr, 0);
 
-        mDateLeft.setImageDrawable(array.getDrawable(R.styleable.dateStyle_leftViewSrc));
-        mDateRight.setImageDrawable(array.getDrawable(R.styleable.dateStyle_rightViewSrc));
+        mDateLeft.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mLeftViewSrc));
+        mDateRight.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mRightViewSrc));
 
-        mDateTitleId = array.getResourceId(R.styleable.dateStyle_titleViewId, R.id.date_title);
+        mDateTitleId = array.getResourceId(R.styleable.DateSelectView_mTitleViewId, R.id.date_title);
         mDateTitle.setId(mDateTitleId);
-        mDateTitle.setText(array.getString(R.styleable.dateStyle_titleViewText));
-        mDateTitle.setTextSize(px2dip(array.getDimension(R.styleable.dateStyle_titleViewTextSize, 16)));
-        mDateTitle.setTextColor(array.getColor(R.styleable.dateStyle_titleViewTextColor, 0xff2C9BB6));
+        mDateTitle.setText(array.getString(R.styleable.DateSelectView_mTitleViewText));
+        mDateTitle.setTextSize(px2dip(array.getDimension(R.styleable.DateSelectView_mTitleViewTextSize, 16)));
+        mDateTitle.setTextColor(array.getColor(R.styleable.DateSelectView_mTitleViewTextColor, 0xff2C9BB6));
 
         mDateToday.setGravity(Gravity.CENTER);
-        mDateToday.setText(array.getString(R.styleable.dateStyle_todayText));
-        mDateToday.setTextSize(px2dip(array.getDimension(R.styleable.dateStyle_todayTextSize, 16)));
-        mDateToday.setTextColor(array.getColor(R.styleable.dateStyle_todayTextColor, 0xffffffff));
+        mDateToday.setText(array.getString(R.styleable.DateSelectView_mTodayText));
+        mDateToday.setTextSize(px2dip(array.getDimension(R.styleable.DateSelectView_mTodayTextSize, 16)));
+        mDateToday.setTextColor(array.getColor(R.styleable.DateSelectView_mTodayTextColor, 0xffffffff));
 
-        int backgroundColor = array.getColor(R.styleable.dateStyle_todayTextBackground, 0xff3e6373);
+        int backgroundColor = array.getColor(R.styleable.DateSelectView_mTodayTextBackground, 0xff3e6373);
         GradientDrawable drawable = new GradientDrawable();//创建drawable
         drawable.setColor(backgroundColor);
         drawable.setCornerRadius(dp2px(25));

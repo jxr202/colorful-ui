@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources >
 
-    <attr name="leftImage" format="color|reference"/>
-    <attr name="leftImageId" format="reference|integer"/>
-    <attr name="leftImageVisibility">
+    <attr name="mLeftImage" format="color|reference"/>
+    <attr name="mLeftImageId" format="reference|integer"/>
+    <attr name="mLeftImageVisibility">
         <enum name="gone" value="8" />
         <enum name="invisible" value="4" />
         <enum name="visible" value="0" />
     </attr>
 
-    <attr name="leftTitleId" format="reference|integer"/>
-    <attr name="leftTitleText" format="string"/>
-    <attr name="leftTitleTextSize" format="dimension"/>
-    <attr name="leftTitleTextColor" format="color"/>
-    <attr name="leftTitleTextVisibility">
+    <attr name="mLeftTitleId" format="reference|integer"/>
+    <attr name="mLeftTitleText" format="string"/>
+    <attr name="mLeftTitleTextSize" format="dimension"/>
+    <attr name="mLeftTitleTextColor" format="color"/>
+    <attr name="mLeftTitleTextVisibility">
         <enum name="gone" value="8" />
         <enum name="invisible" value="4" />
         <enum name="visible" value="0" />
     </attr>
 
-    <attr name="rightTextId" format="reference|integer"/>
-    <attr name="rightText" format="string"/>
-    <attr name="rightTextSize" format="dimension"/>
-    <attr name="rightTextColor" format="color"/>
-    <attr name="rightTextVisibility">
+    <attr name="mRightTextId" format="reference|integer"/>
+    <attr name="mRightText" format="string"/>
+    <attr name="mRightTextSize" format="dimension"/>
+    <attr name="mRightTextColor" format="color"/>
+    <attr name="mRightTextVisibility">
         <enum name="gone" value="8" />
         <enum name="invisible" value="4" />
         <enum name="visible" value="0" />
     </attr>
 
-    <attr name="rightImage" format="color|reference"/>
-    <attr name="rightImageId" format="reference|integer"/>
-    <attr name="rightImageVisibility">
+    <attr name="mRightImage" format="color|reference"/>
+    <attr name="mRightImageId" format="reference|integer"/>
+    <attr name="mRightImageVisibility">
         <enum name="gone" value="8" />
         <enum name="invisible" value="4" />
         <enum name="visible" value="0" />
     </attr>
 
-    <declare-styleable name="dateStyle">
-        <attr name="uiBackground" format="color|reference"/>
+    <declare-styleable name="DateSelectView">
+        <attr name="mBackground" format="color|reference"/>
 
-        <attr name="leftViewId" format="reference|integer"/>
-        <attr name="leftViewSrc" format="color|reference"/>
-        <attr name="leftViewVisibility">
+        <attr name="mLeftViewId" format="reference|integer"/>
+        <attr name="mLeftViewSrc" format="color|reference"/>
+        <attr name="mLeftViewVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="titleViewId" format="reference|integer"/>
-        <attr name="titleViewText" format="string"/>
-        <attr name="titleViewTextSize" format="dimension"/>
-        <attr name="titleViewTextColor" format="color"/>
-        <attr name="titleViewTextVisibility">
+        <attr name="mTitleViewId" format="reference|integer"/>
+        <attr name="mTitleViewText" format="string"/>
+        <attr name="mTitleViewTextSize" format="dimension"/>
+        <attr name="mTitleViewTextColor" format="color"/>
+        <attr name="mTitleViewTextVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="rightViewId" format="reference|integer"/>
-        <attr name="rightViewSrc" format="color|reference"/>
-        <attr name="rightViewVisibility">
+        <attr name="mRightViewId" format="reference|integer"/>
+        <attr name="mRightViewSrc" format="color|reference"/>
+        <attr name="mRightViewVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="todayText" format="color|reference"/>
-        <attr name="todayTextSize" format="dimension"/>
-        <attr name="todayTextColor" format="color"/>
-        <attr name="todayTextBackground" format="color|reference"/>
-        <attr name="todayTextVisibility">
+        <attr name="mTodayText" format="color|reference"/>
+        <attr name="mTodayTextSize" format="dimension"/>
+        <attr name="mTodayTextColor" format="color"/>
+        <attr name="mTodayTextBackground" format="color|reference"/>
+        <attr name="mTodayTextVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />
@@ -78,54 +78,54 @@
     </declare-styleable>
 
     <!-- ****************标题栏*******************-->
-    <declare-styleable name="titleBar">
-        <attr name="leftDrawable" format="color|reference"/>
-        <attr name="leftImageId"/>
-        <attr name="leftImageVisibility"/>
+    <declare-styleable name="TitleBar">
+        <attr name="mLeftDrawable" format="color|reference"/>
+        <attr name="mLeftImageId"/>
+        <attr name="mLeftImageVisibility"/>
 
-        <attr name="titleText" format="string"/>
-        <attr name="titleTextSize" format="dimension"/>
-        <attr name="titleColor" format="color"/>
-        <attr name="titleTextVisibility">
+        <attr name="mTitleText" format="string"/>
+        <attr name="mTitleTextSize" format="dimension"/>
+        <attr name="mTitleColor" format="color"/>
+        <attr name="mTitleTextVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="rightTextId"/>
-        <attr name="rightText"/>
-        <attr name="rightTextSize"/>
-        <attr name="rightTextColor"/>
-        <attr name="rightTextVisibility"/>
+        <attr name="mRightTextId"/>
+        <attr name="mRightText"/>
+        <attr name="mRightTextSize"/>
+        <attr name="mRightTextColor"/>
+        <attr name="mRightTextVisibility"/>
 
-        <attr name="rightDrawable" format="color|reference"/>
-        <attr name="rightImageId"/>
-        <attr name="rightImageVisibility"/>
+        <attr name="mRightDrawable" format="color|reference"/>
+        <attr name="mRightImageId"/>
+        <attr name="mRightImageVisibility"/>
     </declare-styleable>
 
     <!-- **************** ItemView *******************-->
     <declare-styleable name="ItemView">
-        <attr name="leftImage"/>
-        <attr name="leftImageId"/>
-        <attr name="leftImageVisibility"/>
+        <attr name="mLeftImage" />
+        <attr name="mLeftImageId"/>
+        <attr name="mLeftImageVisibility"/>
 
-        <attr name="leftTitleId"/>
-        <attr name="leftTitleText"/>
-        <attr name="leftTitleTextSize"/>
-        <attr name="leftTitleTextColor"/>
-        <attr name="leftTitleTextVisibility"/>
+        <attr name="mLeftTitleId"/>
+        <attr name="mLeftTitleText"/>
+        <attr name="mLeftTitleTextSize"/>
+        <attr name="mLeftTitleTextColor"/>
+        <attr name="mLeftTitleTextVisibility"/>
 
-        <attr name="rightTextId" />
-        <attr name="rightText"/>
-        <attr name="rightTextSize"/>
-        <attr name="rightTextColor"/>
-        <attr name="rightTextVisibility"/>
+        <attr name="mRightTextId" />
+        <attr name="mRightText"/>
+        <attr name="mRightTextSize"/>
+        <attr name="mRightTextColor"/>
+        <attr name="mRightTextVisibility"/>
 
-        <attr name="rightImage"/>
-        <attr name="rightImageId"/>
-        <attr name="rightImageVisibility"/>
+        <attr name="mRightImage"/>
+        <attr name="mRightImageId"/>
+        <attr name="mRightImageVisibility"/>
 
-        <attr name="bottomLineColor" format="color"/>
+        <attr name="mBottomLineColor" format="color"/>
     </declare-styleable>
 
 

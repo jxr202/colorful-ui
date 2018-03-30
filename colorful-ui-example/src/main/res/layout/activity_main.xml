@@ -12,14 +12,14 @@
         android:layout_width="match_parent"
         android:layout_height="44dp"
         android:background="#B6D989"
-        jxr202:leftDrawable="@mipmap/ic_common_back"
-        jxr202:leftImageVisibility="visible"
-        jxr202:rightDrawable="@mipmap/ic_common_share"
-        jxr202:rightImageVisibility="visible"
-        jxr202:titleColor="#030303"
-        jxr202:titleText="@string/app_name"
-        jxr202:titleTextSize="15sp"
-        jxr202:titleTextVisibility="visible" />
+        jxr202:mLeftDrawable="@mipmap/ic_common_back"
+        jxr202:mLeftImageVisibility="visible"
+        jxr202:mRightDrawable="@mipmap/ic_common_share"
+        jxr202:mRightImageVisibility="visible"
+        jxr202:mTitleColor="#030303"
+        jxr202:mTitleText="@string/app_name"
+        jxr202:mTitleTextSize="15sp"
+        jxr202:mTitleTextVisibility="visible" />
 
     <com.jxr202.colorful_ui.DateSelectView
         android:id="@+id/dateSelectView"
@@ -27,16 +27,16 @@
         android:layout_height="50dp"
         android:background="#f9f9f9"
         android:minHeight="43dp"
-        jxr202:leftViewSrc="@drawable/date_left"
-        jxr202:rightViewSrc="@drawable/date_right"
-        jxr202:titleViewId="@+id/date_title"
-        jxr202:titleViewText="@string/date_title"
-        jxr202:titleViewTextSize="16dp"
-        jxr202:titleViewTextColor="#2C9BB6"
-        jxr202:todayTextBackground="#50D2C2"
-        jxr202:todayText="@string/date_today"
-        jxr202:todayTextSize="16dp"
-        jxr202:todayTextColor="#ffffff"/>
+        jxr202:mLeftViewSrc="@drawable/date_left"
+        jxr202:mRightViewSrc="@drawable/date_right"
+        jxr202:mTitleViewId="@+id/date_title"
+        jxr202:mTitleViewText="@string/date_title"
+        jxr202:mTitleViewTextSize="16dp"
+        jxr202:mTitleViewTextColor="#2C9BB6"
+        jxr202:mTodayTextBackground="#50D2C2"
+        jxr202:mTodayText="@string/date_today"
+        jxr202:mTodayTextSize="16dp"
+        jxr202:mTodayTextColor="#ffffff"/>
 
     <TextView
         android:id="@+id/tv_date"
@@ -52,14 +52,14 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:background="#ffffff"
-        jxr202:leftImage="@mipmap/we_chat_sport_logo"
-        jxr202:leftTitleText="微信运动"
-        jxr202:leftTitleTextSize="15sp"
-        jxr202:leftTitleTextColor="#010101"
-        jxr202:rightText="24小时不停"
-        jxr202:rightTextSize="14sp"
-        jxr202:rightTextColor="#999999"
-        jxr202:rightImage="@drawable/ic_item_more"
-        jxr202:bottomLineColor="#cccccc"/>
+        jxr202:mLeftImage="@mipmap/we_chat_sport_logo"
+        jxr202:mLeftTitleText="微信运动"
+        jxr202:mLeftTitleTextSize="15sp"
+        jxr202:mLeftTitleTextColor="#010101"
+        jxr202:mRightText="24小时不停"
+        jxr202:mRightTextSize="14sp"
+        jxr202:mRightTextColor="#999999"
+        jxr202:mRightImage="@drawable/ic_item_more"
+        jxr202:mBottomLineColor="#cccccc"/>
 
 </LinearLayout >
