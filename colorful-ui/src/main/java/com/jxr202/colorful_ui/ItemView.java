@@ -28,6 +28,7 @@ public class ItemView extends RelativeLayout {
     private int mLeftIconId;
     private int mRightIconId;
     private int mRightIconVisibility;
+    private int mLeftTitleWidth;
 
     public ItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -54,6 +55,7 @@ public class ItemView extends RelativeLayout {
         mLeftIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mLeftImage));
         mLeftIcon.setVisibility(array.getInteger(R.styleable.ItemView_mLeftImageVisibility, VISIBLE));
 
+        mLeftTitleWidth = dp2px(array.getDimension(R.styleable.ItemView_mLeftTitleWidth, 200));
         mLeftTitle.setId(array.getResourceId(R.styleable.ItemView_mLeftTitleId, R.id.leftTextId));
         mLeftTitle.setText(array.getString(R.styleable.ItemView_mLeftTitleText));
         mLeftTitle.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mLeftTitleTextSize, 15)));
@@ -84,7 +86,7 @@ public class ItemView extends RelativeLayout {
 
     private void initView() {
         RelativeLayout.LayoutParams leftIconParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams leftTitleParams = new RelativeLayout.LayoutParams(dp2px(180), ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams leftTitleParams = new RelativeLayout.LayoutParams(mLeftTitleWidth, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams rightIconParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams rightTextParams = new RelativeLayout.LayoutParams(dp2px(80), ViewGroup.LayoutParams.WRAP_CONTENT);
         LayoutParams bottomLineParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);

@@ -111,6 +111,7 @@
 
         <attr name="mLeftTitleId"/>
         <attr name="mLeftTitleText"/>
+        <attr name="mLeftTitleWidth"/>
         <attr name="mLeftTitleTextSize"/>
         <attr name="mLeftTitleTextColor"/>
         <attr name="mLeftTitleTextVisibility"/>
