@@ -54,6 +54,7 @@
         jxr202:mBottomLineColor="#cccccc"
         jxr202:mLeftImage="@mipmap/we_chat_sport_logo"
         jxr202:mLeftTitleText="微信运动"
+        jxr202:mLeftTitleWidth="200dp"
         jxr202:mLeftTitleTextColor="#010101"
         jxr202:mLeftTitleTextSize="15sp"
         jxr202:mRightImage="@drawable/ic_item_more"

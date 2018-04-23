@@ -11,6 +11,7 @@
 
     <attr name="mLeftTitleId" format="reference|integer"/>
     <attr name="mLeftTitleText" format="string"/>
+    <attr name="mLeftTitleWidth" format="dimension"/>
     <attr name="mLeftTitleTextSize" format="dimension"/>
     <attr name="mLeftTitleTextColor" format="color"/>
     <attr name="mLeftTitleTextVisibility">
