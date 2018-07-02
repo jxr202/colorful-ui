@@ -67,11 +67,9 @@
             <enum name="visible" value="0" />
         </attr>
 
-        <attr name="mTodayText" format="color|reference"/>
-        <attr name="mTodayTextSize" format="dimension"/>
-        <attr name="mTodayTextColor" format="color"/>
-        <attr name="mTodayTextBackground" format="color|reference"/>
-        <attr name="mTodayTextVisibility">
+        <attr name="mTodayViewId" format="reference|integer"/>
+        <attr name="mTodayViewSrc" format="color|reference"/>
+        <attr name="mTodayViewVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />
             <enum name="visible" value="0" />

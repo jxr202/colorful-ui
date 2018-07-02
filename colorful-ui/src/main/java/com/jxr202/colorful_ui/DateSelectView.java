@@ -28,7 +28,7 @@ public class DateSelectView extends RelativeLayout {
     private ImageView mDateLeft;
     private ImageView mDateRight;
     private TextView mDateTitle;
-    private TextView mDateToday;
+    private ImageView mDateToday;
 
     private int mDateTitleId;
     private Context mContext;
@@ -63,30 +63,19 @@ public class DateSelectView extends RelativeLayout {
         mDateLeft = new ImageView(context);
         mDateRight = new ImageView(context);
         mDateTitle = new TextView(context);
-        mDateToday = new TextView(context);
+        mDateToday = new ImageView(context);
 
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.DateSelectView, defStyleAttr, 0);
 
         mDateLeft.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mLeftViewSrc));
         mDateRight.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mRightViewSrc));
+        mDateToday.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mTodayViewSrc));
 
         mDateTitleId = array.getResourceId(R.styleable.DateSelectView_mTitleViewId, R.id.date_title);
         mDateTitle.setId(mDateTitleId);
         mDateTitle.setText(array.getString(R.styleable.DateSelectView_mTitleViewText));
         mDateTitle.setTextSize(px2dip(array.getDimension(R.styleable.DateSelectView_mTitleViewTextSize, 16)));
         mDateTitle.setTextColor(array.getColor(R.styleable.DateSelectView_mTitleViewTextColor, 0xff2C9BB6));
-
-        mDateToday.setGravity(Gravity.CENTER);
-        mDateToday.setText(array.getString(R.styleable.DateSelectView_mTodayText));
-        mDateToday.setTextSize(px2dip(array.getDimension(R.styleable.DateSelectView_mTodayTextSize, 16)));
-        mDateToday.setTextColor(array.getColor(R.styleable.DateSelectView_mTodayTextColor, 0xffffffff));
-
-        int backgroundColor = array.getColor(R.styleable.DateSelectView_mTodayTextBackground, 0xff3e6373);
-        GradientDrawable drawable = new GradientDrawable();//创建drawable
-        drawable.setColor(backgroundColor);
-        drawable.setCornerRadius(dp2px(25));
-        drawable.setStroke(dp2px(1), backgroundColor);
-        mDateToday.setBackground(drawable);
 
         array.recycle();
 

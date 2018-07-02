@@ -32,10 +32,7 @@
         jxr202:mTitleViewText="@string/date_title"
         jxr202:mTitleViewTextColor="#2C9BB6"
         jxr202:mTitleViewTextSize="16dp"
-        jxr202:mTodayText="@string/date_today"
-        jxr202:mTodayTextBackground="#50D2C2"
-        jxr202:mTodayTextColor="#ffffff"
-        jxr202:mTodayTextSize="16dp" />
+        jxr202:mTodayViewSrc="@mipmap/date_today" />
 
     <TextView
         android:id="@+id/tv_date"
