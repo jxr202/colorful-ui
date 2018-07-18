@@ -63,7 +63,7 @@ public class ItemView extends RelativeLayout {
         mLeftTitle.setVisibility(array.getInteger(R.styleable.ItemView_mLeftTitleTextVisibility, VISIBLE));
         mLeftTitle.setEllipsize(TextUtils.TruncateAt.END);
         mLeftTitle.setLines(1);
-        mLeftTitle.setPadding(dp2px(15), 0, dp2px(15), 0);
+        mLeftTitle.setPadding(dp2px(5), 0, dp2px(5), 0);
 
         mRightIconId = array.getResourceId(R.styleable.ItemView_mRightImageId, R.id.rightIconId);
         mRightIconVisibility = array.getInteger(R.styleable.ItemView_mRightImageVisibility, VISIBLE);
