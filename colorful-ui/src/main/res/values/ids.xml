@@ -3,5 +3,6 @@
     <item name="date_title" type="id"/>
     <item name="leftIconId" type="id"/>
     <item name="leftTextId" type="id"/>
+    <item name="rightTextId" type="id"/>
     <item name="rightIconId" type="id"/>
 </resources>

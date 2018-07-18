@@ -55,9 +55,10 @@
         jxr202:mLeftTitleTextColor="#010101"
         jxr202:mLeftTitleTextSize="15sp"
         jxr202:mRightImage="@drawable/ic_item_more"
-        jxr202:mRightImageVisibility="gone"
+        jxr202:mRightImageVisibility="visible"
         jxr202:mRightText="24小时不停"
         jxr202:mRightTextColor="#999999"
-        jxr202:mRightTextSize="14sp" />
+        jxr202:mRightTextSize="14sp"
+        jxr202:mRightTextVisibility="visible"/>
 
 </LinearLayout>

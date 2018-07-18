@@ -26,9 +26,9 @@ public class ItemView extends RelativeLayout {
 
     private Context mContext;
     private int mLeftIconId;
+    private int mLeftTitleId;
     private int mRightIconId;
     private int mRightIconVisibility;
-    private int mLeftTitleWidth;
 
     public ItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -55,8 +55,8 @@ public class ItemView extends RelativeLayout {
         mLeftIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mLeftImage));
         mLeftIcon.setVisibility(array.getInteger(R.styleable.ItemView_mLeftImageVisibility, VISIBLE));
 
-        mLeftTitleWidth = dp2px(array.getDimension(R.styleable.ItemView_mLeftTitleWidth, 200));
-        mLeftTitle.setId(array.getResourceId(R.styleable.ItemView_mLeftTitleId, R.id.leftTextId));
+        mLeftTitleId = array.getResourceId(R.styleable.ItemView_mLeftTitleId, R.id.leftTextId);
+        mLeftTitle.setId(mLeftTitleId);
         mLeftTitle.setText(array.getString(R.styleable.ItemView_mLeftTitleText));
         mLeftTitle.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mLeftTitleTextSize, 15)));
         mLeftTitle.setTextColor(array.getColor(R.styleable.ItemView_mLeftTitleTextColor, 0xff010101));
@@ -71,7 +71,7 @@ public class ItemView extends RelativeLayout {
         mRightIcon.setImageDrawable(array.getDrawable(R.styleable.ItemView_mRightImage));
         mRightIcon.setVisibility(mRightIconVisibility);
 
-        mRightSummary.setId(array.getResourceId(R.styleable.ItemView_mRightTextId, R.id.leftTextId));
+        mRightSummary.setId(array.getResourceId(R.styleable.ItemView_mRightTextId, R.id.rightTextId));
         mRightSummary.setText(array.getString(R.styleable.ItemView_mRightText));
         mRightSummary.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mRightTextSize, 15)));
         mRightSummary.setTextColor(array.getColor(R.styleable.ItemView_mRightTextColor, 0xff999999));
@@ -86,9 +86,9 @@ public class ItemView extends RelativeLayout {
 
     private void initView() {
         RelativeLayout.LayoutParams leftIconParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams leftTitleParams = new RelativeLayout.LayoutParams(mLeftTitleWidth, ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams leftTitleParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         RelativeLayout.LayoutParams rightIconParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        RelativeLayout.LayoutParams rightTextParams = new RelativeLayout.LayoutParams(dp2px(80), ViewGroup.LayoutParams.WRAP_CONTENT);
+        RelativeLayout.LayoutParams rightTextParams = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         LayoutParams bottomLineParams = new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
 
         leftIconParams.addRule(CENTER_VERTICAL);
@@ -104,6 +104,7 @@ public class ItemView extends RelativeLayout {
         rightIconParams.setMarginEnd(dp2px(10));
 
         rightTextParams.addRule(CENTER_VERTICAL);
+        rightTextParams.addRule(END_OF, mLeftTitleId);
         if (mRightIconVisibility == VISIBLE) {
             rightTextParams.addRule(START_OF, mRightIconId);
         } else {
