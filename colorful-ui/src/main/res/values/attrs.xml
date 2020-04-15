@@ -69,6 +69,7 @@
 
         <attr name="mTodayViewId" format="reference|integer"/>
         <attr name="mTodayViewSrc" format="color|reference"/>
+        <attr name="mTodayViewBackground" format="color|reference"/>
         <attr name="mTodayViewVisibility">
             <enum name="gone" value="8" />
             <enum name="invisible" value="4" />

@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://F:\Github\colorful-ui\UI.iml" filepath="F:\Github\colorful-ui\UI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorful-ui.iml" filepath="$PROJECT_DIR$/colorful-ui.iml" />
-      <module fileurl="file://F:\Github\colorful-ui\colorful-ui\colorful-ui.iml" filepath="F:\Github\colorful-ui\colorful-ui\colorful-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorful-ui/colorful-ui-colorful-ui.iml" filepath="$PROJECT_DIR$/colorful-ui/colorful-ui-colorful-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorful-ui-example/colorful-ui-example.iml" filepath="$PROJECT_DIR$/colorful-ui-example/colorful-ui-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/colorful-ui.iml" filepath="$PROJECT_DIR$/colorful-ui.iml" group="colorful-ui" />
+      <module fileurl="file://$PROJECT_DIR$/colorful-ui/colorful-ui-colorful-ui.iml" filepath="$PROJECT_DIR$/colorful-ui/colorful-ui-colorful-ui.iml" group="colorful-ui/colorful-ui" />
+      <module fileurl="file://$PROJECT_DIR$/colorful-ui-example/colorful-ui-example.iml" filepath="$PROJECT_DIR$/colorful-ui-example/colorful-ui-example.iml" group="colorful-ui/colorful-ui-example" />
     </modules>
   </component>
 </project>

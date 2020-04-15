@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import static android.util.TypedValue.COMPLEX_UNIT_PX;
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
+
 /**
  * Created by Jxr35 on 2018/3/29
  */
@@ -58,7 +61,7 @@ public class ItemView extends RelativeLayout {
         mLeftTitleId = array.getResourceId(R.styleable.ItemView_mLeftTitleId, R.id.leftTextId);
         mLeftTitle.setId(mLeftTitleId);
         mLeftTitle.setText(array.getString(R.styleable.ItemView_mLeftTitleText));
-        mLeftTitle.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mLeftTitleTextSize, 15)));
+        mLeftTitle.setTextSize(COMPLEX_UNIT_PX, array.getDimension(R.styleable.ItemView_mLeftTitleTextSize, 15));
         mLeftTitle.setTextColor(array.getColor(R.styleable.ItemView_mLeftTitleTextColor, 0xff010101));
         mLeftTitle.setVisibility(array.getInteger(R.styleable.ItemView_mLeftTitleTextVisibility, VISIBLE));
         mLeftTitle.setEllipsize(TextUtils.TruncateAt.END);
@@ -73,7 +76,7 @@ public class ItemView extends RelativeLayout {
 
         mRightSummary.setId(array.getResourceId(R.styleable.ItemView_mRightTextId, R.id.rightTextId));
         mRightSummary.setText(array.getString(R.styleable.ItemView_mRightText));
-        mRightSummary.setTextSize(px2dip(array.getDimension(R.styleable.ItemView_mRightTextSize, 15)));
+        mRightSummary.setTextSize(COMPLEX_UNIT_PX, array.getDimension(R.styleable.ItemView_mRightTextSize, 15));
         mRightSummary.setTextColor(array.getColor(R.styleable.ItemView_mRightTextColor, 0xff999999));
         mRightSummary.setVisibility(array.getInteger(R.styleable.ItemView_mRightTextVisibility, VISIBLE));
         mRightSummary.setGravity(Gravity.END | Gravity.CENTER);

@@ -2,10 +2,8 @@ package com.jxr202.colorful_ui;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,6 +12,8 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
+import static android.util.TypedValue.COMPLEX_UNIT_PX;
+import static android.util.TypedValue.COMPLEX_UNIT_SP;
 import static com.jxr202.colorful_ui.DateUtils.dateToString;
 import static com.jxr202.colorful_ui.DateUtils.getTodayDate;
 
@@ -69,12 +69,13 @@ public class DateSelectView extends RelativeLayout {
 
         mDateLeft.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mLeftViewSrc));
         mDateRight.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mRightViewSrc));
+        mDateToday.setBackground(array.getDrawable(R.styleable.DateSelectView_mTodayViewBackground));
         mDateToday.setImageDrawable(array.getDrawable(R.styleable.DateSelectView_mTodayViewSrc));
 
         mDateTitleId = array.getResourceId(R.styleable.DateSelectView_mTitleViewId, R.id.date_title);
         mDateTitle.setId(mDateTitleId);
         mDateTitle.setText(array.getString(R.styleable.DateSelectView_mTitleViewText));
-        mDateTitle.setTextSize(px2dip(array.getDimension(R.styleable.DateSelectView_mTitleViewTextSize, 16)));
+        mDateTitle.setTextSize(COMPLEX_UNIT_PX, array.getDimension(R.styleable.DateSelectView_mTitleViewTextSize, 16));
         mDateTitle.setTextColor(array.getColor(R.styleable.DateSelectView_mTitleViewTextColor, 0xff2C9BB6));
 
         array.recycle();
